@@ -1,0 +1,1 @@
+I’m setting up IP cameras at home to monitor my newborn. Tried Frigate, ZoneMinder, Reolink, etc. Want advice: best software/hardware for reliable monitoring, motion/non-motion detection, alerts, integration with Home Assistant?

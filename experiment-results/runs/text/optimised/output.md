@@ -1,3 +1,5 @@
+# Output
+
 This is a deeply important project, and I commend you for taking a proactive approach to ensuring your son's safety and your peace of mind. The shift in perspective you described is a common one for new parents, and leveraging technology for reassurance is a smart move. Your existing setup provides a solid foundation, and your detailed articulation of the challenges and desired features is excellent.
 
 Let's break down your request into actionable guidance.

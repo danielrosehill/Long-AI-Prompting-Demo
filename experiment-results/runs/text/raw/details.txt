@@ -1,0 +1,3 @@
+This run is the transcribed speech to text output fed directly into Gemini without the intervening (voice-specific) prompt optimisation agent. 
+
+The inference was generated with a system prompt intended to match the desired behavior of the agent. 
