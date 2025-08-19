@@ -1,57 +1,3 @@
-# Long Prompting Experiment
-
-Modern LLMs demonstrate increasingly powerful abilities to handle large context windows. While research [has shown](https://ar5iv.labs.arxiv.org/html/2402.14848v1) that inference coherence can degrade with longer prompts, this degradation curve is expected to flatten progressively with model improvements.
-
-**Context Window Utilization:**
-- Gemini 2.5 Lite supports ~1 million tokens maximum context
-- Raw transcript prompt: **0.35%** of context window
-- AI-enhanced prompt: **0.17%** of context window
-
-### Research Question
-
-Does prompt optimization through AI-assisted refinement improve inference quality compared to raw voice-to-text input and minimal prompts?
-
----
-
-## Experiment Design
-
-This experiment compares inference quality across three distinct prompting approaches for a technical consultation scenario:
-
-| Run Type | Description | Prompt Source |
-|----------|-------------|---------------|
-| **Control** | Minimalist "low effort" prompt reflecting typical casual LLM usage | [Hand-crafted](prompts/user-prompts/control.md) |
-| **Optimized** | Voice prompt processed by specialized refinement agent | [AI-enhanced](prompts/user-prompts/gemini-optimised.md) |
-| **Raw** | Unprocessed speech-to-text transcript fed directly to LLM | [Voice transcript](prompts/user-prompts/raw-audio.md) |
-
-### Standardized Conditions
-
-- **Model:** Gemini 2.5 Lite
-- **System Prompt:** [Identical across all runs](prompts/system/system-prompt.md)
-- **Temperature:** 1.0 (default)
-- **Domain:** Home automation & baby monitoring consultation
-
----
-
-## Results  
-
-
-![alt text](charts/prompt-length.png)
-
-![alt text](charts/output-length.png)
-
-![alt text](charts/ratio.png)
-
- 
-| title         |   Total Prompt (System + User Prompt) |   Output |   Output/Prompt Ratio |
-|:--------------|--------------------------------------:|---------:|----------------------:|
-| Control Run   |                                   725 |     2722 |                  3.75 |
-| Optimised Run |                                  1630 |     3843 |                  2.36 |
-| Raw Run       |                                  3322 |     4336 |                  1.31 |
-
----
-
-# AI Analysis (First Pass)
- 
 ## Hypothesis One: *The AI agent that “preprocessed” the raw voice prompt achieved a better output*
 
 ### Evidence
@@ -94,5 +40,4 @@ The short prompt was efficient, but it forced the model to make assumptions. Bot
 
 * **Hypothesis One:** True. Preprocessing improved clarity and yielded a better output.
 * **Hypothesis Two:** True. Both verbose and preprocessed prompts outperformed the casual short prompt, though preprocessing provided the highest quality.
-
  
